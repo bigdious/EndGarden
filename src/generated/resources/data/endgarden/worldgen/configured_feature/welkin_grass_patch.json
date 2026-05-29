@@ -1,0 +1,8 @@
+{
+  "type": "endgarden:welkin_patch",
+  "config": {
+    "state": {
+      "Name": "minecraft:diamond_block"
+    }
+  }
+}

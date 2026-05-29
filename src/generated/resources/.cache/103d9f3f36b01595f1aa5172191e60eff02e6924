@@ -1,0 +1,7 @@
+// 1.21.1	2026-05-29T16:42:08.3059277	Registries
+7057315ac94d3926fa58bd4350d0e89109ea915e data/endgarden/neoforge/biome_modifier/add_grass_to_welkin.json
+736895ab51ea69af1fa212150733c90e75e3576a data/endgarden/neoforge/biome_modifier/add_welkin_fields.json
+8bcd458474e52c1689c7bf51585940b38ce90789 data/endgarden/worldgen/configured_feature/welkin_grassifying.json
+dd93618a3e3e47bd4f6c61c6377588bbd5e2b2f2 data/endgarden/worldgen/configured_feature/welkin_grass_patch.json
+ac880212e19803520bc163a5e66e77e81c7c5a06 data/endgarden/worldgen/placed_feature/welkin_grassifying.json
+8b2fcd968de69b34068900964ef2866c8b90e6e7 data/endgarden/worldgen/placed_feature/welkin_grass_patch.json
