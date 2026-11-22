@@ -1,0 +1,6 @@
+{
+  "parent": "endgarden:block/star_fern",
+  "textures": {
+    "color": "endgarden:block/star_fern_teal"
+  }
+}

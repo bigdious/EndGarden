@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "endgarden:block/orchestral_bloom_closed"
+    },
+    "open=true": {
+      "model": "endgarden:block/orchestral_bloom_open"
+    }
+  }
+}

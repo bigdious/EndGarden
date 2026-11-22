@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "endgarden:block/welkin_grass_bundle"
+      },
+      {
+        "model": "endgarden:block/welkin_grass_bundle",
+        "y": 180
+      },
+      {
+        "model": "endgarden:block/welkin_grass_bundle",
+        "y": 90
+      },
+      {
+        "model": "endgarden:block/welkin_grass_bundle",
+        "y": 270
+      }
+    ]
+  }
+}

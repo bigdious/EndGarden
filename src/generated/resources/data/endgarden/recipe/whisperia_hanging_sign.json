@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "endgarden:whisperia_log_stripped"
+    },
+    "/": {
+      "tag": "c:chains"
+    }
+  },
+  "pattern": [
+    "/ /",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "endgarden:whisperia_hanging_sign"
+  }
+}

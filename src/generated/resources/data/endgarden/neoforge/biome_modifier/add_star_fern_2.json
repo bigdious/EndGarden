@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#endgarden:has_feature/welkin_fields",
+  "features": "endgarden:star_fern_2",
+  "step": "vegetal_decoration"
+}

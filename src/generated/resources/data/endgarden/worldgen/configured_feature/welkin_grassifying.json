@@ -8,7 +8,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "minecraft:emerald_block"
+              "Name": "endgarden:welkin_sprouts"
             }
           }
         }
@@ -17,18 +17,27 @@
         {
           "type": "minecraft:block_predicate_filter",
           "predicate": {
-            "type": "minecraft:matching_blocks",
-            "blocks": "minecraft:diamond_block",
-            "offset": [
-              0,
-              -1,
-              0
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "endgarden:welkin_grass",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
             ]
           }
         }
       ]
     },
-    "tries": 64,
+    "tries": 80,
     "xz_spread": 16,
     "y_spread": 0
   }

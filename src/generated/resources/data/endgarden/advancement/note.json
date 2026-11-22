@@ -1,0 +1,123 @@
+{
+  "parent": "minecraft:end/kill_dragon",
+  "criteria": {
+    "anyEGitem1": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:welkin_grass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "anyEGitem2": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:orchestral_bloom"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "anyEGitem3": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:welkin_sprouts"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "anyEGitem4": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:whisperia_sapling"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "anyEGitem5": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:whisperia_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "anyEGitem6": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:whisperia_hangings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "anyEGitem7": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:whisperia_leaves"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "anyEGitem8": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:star_fern_magenta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "anyEGitem9": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgarden:star_fern_teal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.endgarden.note.desc"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "endgarden:orchestral_bloom"
+    },
+    "title": {
+      "translate": "advancement.endgarden.note"
+    }
+  },
+  "requirements": [
+    [
+      "anyEGitem1",
+      "anyEGitem2",
+      "anyEGitem3",
+      "anyEGitem4",
+      "anyEGitem5",
+      "anyEGitem6",
+      "anyEGitem7",
+      "anyEGitem8",
+      "anyEGitem9"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

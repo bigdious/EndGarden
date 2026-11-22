@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:builtin/entity",
+  "textures": {
+    "particle": "endgarden:block/stripped_whisperia_log"
+  }
+}

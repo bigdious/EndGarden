@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "endgarden:item/ghost_whisperia_sapling"
+  }
+}

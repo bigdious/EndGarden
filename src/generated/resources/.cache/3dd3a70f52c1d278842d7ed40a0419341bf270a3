@@ -1,1 +1,19 @@
-// 1.21.1	2026-05-26T19:59:45.781321	Tags for minecraft:item mod id endgarden
+// 1.21.1	2026-07-12T14:15:00.5564492	Tags for minecraft:item mod id endgarden
+7e2a08404ce5e3002bf5b76f49e05395845f585c data/c/tags/item/fences.json
+7e2a08404ce5e3002bf5b76f49e05395845f585c data/c/tags/item/fences/wooden.json
+02dca0e20b39402fb87fbbc42feed67bf474cd7f data/c/tags/item/fence_gates.json
+02dca0e20b39402fb87fbbc42feed67bf474cd7f data/c/tags/item/fence_gates/wooden.json
+8c4603792263de771b44aee19f8f9239b6210fdb data/endgarden/tags/item/orchestral_bloom_triggers.json
+cb56905ec3d8635c458895b3bbde85657bc8d8f8 data/endgarden/tags/item/whisperia_logs.json
+0aacdc5fe9ec5cdf2b02d605cea126d944a04188 data/minecraft/tags/item/boats.json
+1b80b3f90ddbabc5ee4b417123686ab9d95f722e data/minecraft/tags/item/planks.json
+37966556eada52c59ab3b82bc5e3c95baa5ca7f6 data/minecraft/tags/item/signs.json
+15e711ec293f0b58b4129a70b28828ffd3c2deb3 data/minecraft/tags/item/slabs.json
+0f18ea43175ff156654974057a4ce39a0b9d0fec data/minecraft/tags/item/stairs.json
+44b51d789d4444d0f7291ae68776dca27ddd32c3 data/minecraft/tags/item/wooden_buttons.json
+1174b1c2a3dd538a0640af75aa0afce261a3a48d data/minecraft/tags/item/wooden_doors.json
+7e2a08404ce5e3002bf5b76f49e05395845f585c data/minecraft/tags/item/wooden_fences.json
+9bad2b1e4e4a70474ec692c9fde31db31eec5cfe data/minecraft/tags/item/wooden_pressure_plates.json
+15e711ec293f0b58b4129a70b28828ffd3c2deb3 data/minecraft/tags/item/wooden_slabs.json
+0f18ea43175ff156654974057a4ce39a0b9d0fec data/minecraft/tags/item/wooden_stairs.json
+63ae48f84ea89f91783cb5f49249f8ec734b8f44 data/minecraft/tags/item/wooden_trapdoors.json

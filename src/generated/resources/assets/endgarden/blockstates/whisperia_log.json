@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "endgarden:block/whisperia_log",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "endgarden:block/whisperia_log",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "endgarden:block/whisperia_log",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "endgarden:block/whisperia_log",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "endgarden:block/whisperia_log"
+    },
+    "facing=west": {
+      "model": "endgarden:block/whisperia_log",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

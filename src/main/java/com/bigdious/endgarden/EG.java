@@ -3,15 +3,14 @@ package com.bigdious.endgarden;
 import com.bigdious.endgarden.client.EGClientEvents;
 import com.bigdious.endgarden.config.ConfigSetup;
 import com.bigdious.endgarden.data.*;
-import com.bigdious.endgarden.init.EGBlockEntities;
-import com.bigdious.endgarden.init.EGBlocks;
-import com.bigdious.endgarden.init.EGItems;
-import com.bigdious.endgarden.init.EGTab;
+import com.bigdious.endgarden.init.*;
 import com.bigdious.endgarden.worldgen.features.EGFeatures;
+import com.bigdious.endgarden.worldgen.tree.EGTreestuffPlacerTypes;
 import com.google.common.reflect.Reflection;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
@@ -22,6 +21,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.apache.logging.log4j.LogManager;
@@ -42,18 +42,25 @@ public class EG {
 		bus.addListener(ConfigSetup::reloadConfigs);
 		NeoForge.EVENT_BUS.addListener(ConfigSetup::syncConfigOnLogin);
 		bus.addListener(this::registerPacket);
-		bus.addListener(EGTab::addToTabs);
 
 		EGBlockEntities.BLOCK_ENTITIES.register(bus);
 		EGBlocks.BLOCKS.register(bus);
 		EGItems.ITEMS.register(bus);
+		EGEntities.ENTITIES.register(bus);
 		EGFeatures.FEATURES.register(bus);
+		EGPOITypes.POIS.register(bus);
+		EGTreestuffPlacerTypes.TRUNK_PLACERS.register(bus);
+		EGTreestuffPlacerTypes.FOLIAGE_PLACERS.register(bus);
+		EGTab.CREATIVE_TABS.register(bus);
+		EGSoundEffects.SOUNDS.register(bus);
+		EGEvents.initEvents(bus);
 
 		if (dist.isClient()) {
 			EGClientEvents.initEvents(bus);
 		}
 
 		bus.addListener(this::gatherData);
+		bus.addListener(this::addBlockEntityTypes);
 
 
 	}
@@ -73,7 +80,7 @@ public class EG {
 
 		RegistryDataGenerator registryDataGenerator = new RegistryDataGenerator(packOutput, datapackProvider.getRegistryProvider());
 		var lookupProvider = registryDataGenerator.getRegistryProvider();
-		var blocktags = new EGBlockTagGenerator(packOutput, lookupProvider, existingFileHelper);
+		var blocktags = new EGBlockTagsGenerator(packOutput, lookupProvider, existingFileHelper);
 		generator.addProvider(isServer, blocktags);
 
 		//FUCKER, BE ATTENTIVE FOR THE BELOW
@@ -81,8 +88,20 @@ public class EG {
 
 		generator.addProvider(isServer, new EGItemTagGenerator(packOutput, lookupProvider, blocktags.contentsGetter(), existingFileHelper));
 		generator.addProvider(isServer, new EGLootGenerator(packOutput, lookupProvider));
-		generator.addProvider(isServer, new EGCraftingGenerator(packOutput, lookupProvider));
-		generator.addProvider(isServer, new BiomeTagsGenerator(packOutput, lookupProvider, existingFileHelper));
+		generator.addProvider(isServer, new EGCraftingsGenerator(packOutput, lookupProvider));
+		generator.addProvider(isServer, new BiomeTagGenerator(packOutput, lookupProvider, existingFileHelper));
+		generator.addProvider(isClient, new SoundDefinitionGenerator(packOutput, existingFileHelper));
+		generator.addProvider(isServer, new EGAdvancementProvider(packOutput, lookupProvider, existingFileHelper));
+	}
+
+	public void addBlockEntityTypes(BlockEntityTypeAddBlocksEvent event) {
+		event.modify(BlockEntityType.SIGN,
+			EGBlocks.WHISPERIA_SIGN.get(), EGBlocks.WHISPERIA_WALL_SIGN.get());
+
+		event.modify(BlockEntityType.HANGING_SIGN,
+			EGBlocks.WHISPERIA_HANGING_SIGN.get(), EGBlocks.WHISPERIA_WALL_HANGING_SIGN.get());
+
+
 	}
 
 	public void registerPacket(RegisterPayloadHandlersEvent event) {

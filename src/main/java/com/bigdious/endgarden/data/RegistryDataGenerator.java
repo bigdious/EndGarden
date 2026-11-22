@@ -1,7 +1,7 @@
 package com.bigdious.endgarden.data;
 
 import com.bigdious.endgarden.EG;
-import com.bigdious.endgarden.worldgen.features.EGBiomeModifiers;
+import com.bigdious.endgarden.worldgen.features.EGBiomeModifier;
 import com.bigdious.endgarden.worldgen.features.EGConfiguredFeatures;
 import com.bigdious.endgarden.worldgen.features.EGPlacedFeatures;
 import net.minecraft.core.HolderLookup;
@@ -18,7 +18,7 @@ public class RegistryDataGenerator extends DatapackBuiltinEntriesProvider {
 	private static final RegistrySetBuilder REGISTRIES = new RegistrySetBuilder()
 		.add(Registries.CONFIGURED_FEATURE, EGConfiguredFeatures::bootstrap)
 		.add(Registries.PLACED_FEATURE, EGPlacedFeatures::bootstrap)
-		.add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, EGBiomeModifiers::bootstrap);
+		.add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, EGBiomeModifier::bootstrap);
 
 	public RegistryDataGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 

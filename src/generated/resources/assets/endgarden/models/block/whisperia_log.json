@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "endgarden:block/whisperia_log_top",
+    "side": "endgarden:block/whisperia_log"
+  }
+}

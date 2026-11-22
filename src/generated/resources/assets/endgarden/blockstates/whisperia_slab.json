@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "endgarden:block/whisperia_slab"
+    },
+    "type=double": {
+      "model": "endgarden:block/whisperia_planks"
+    },
+    "type=top": {
+      "model": "endgarden:block/whisperia_slab_top"
+    }
+  }
+}

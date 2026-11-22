@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#endgarden:has_feature/welkin_fields",
+  "features": "endgarden:whisperia",
+  "step": "vegetal_decoration"
+}
